@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import Button from "../../Elements/Button/Button"
 import Span from "../../Elements/HamburgerSpan/Span"
+import { Link } from "react-router-dom"
 
 const Navbar = (Props) => {
     const { active, children } = Props
@@ -55,7 +56,7 @@ const NavbarMenu = () => {
     return (
         <ul className="border-2 shadow-xl absolute right-0 -bottom-44 lg:flex lg:w-1/2 lg:static lg:shadow-none lg:border-none lg:bg-white justify-evenly transition duration-1000 hidden nav-ul">
                 {NavbarMenu.map((item, index) => {
-                    return <li key={index} className="text-lg hover:text-mainColor py-2 px-5"><a href="#">{item}</a></li>
+                    return <li key={index} className="text-lg hover:text-mainColor py-2 px-5"><Link to={`#${item}`}>{item}</Link></li>
                 })}
             </ul>
     )

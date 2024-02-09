@@ -38,15 +38,13 @@ const LayoutNavbar = () => {
 
 
     return (
-        <>
-            <nav className="w-full h-16 p-1 flex justify-between items-center relative lg:justify-around" id="navbar">
-                <Navbar active={active}>
-                    <Navbar.NavbarTitle />
-                    <Navbar.NavbarHamburger active={active} setActive={setActive} />
-                    <Navbar.NavbarMenu />
-                </Navbar>
-            </nav>
-        </>
+        <nav className="w-full h-16 p-1 flex justify-between items-center relative lg:justify-around" id="navbar">
+            <Navbar active={active}>
+                <Navbar.NavbarTitle />
+                <Navbar.NavbarHamburger active={active} setActive={setActive} />
+                <Navbar.NavbarMenu />
+            </Navbar>
+        </nav>
     )
 }
 

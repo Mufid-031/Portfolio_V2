@@ -5,7 +5,7 @@ import LinkFriend from "../Fragments/LinkToBeFriend/LinkFriend"
 
 const About = () => {
     return (
-        <Container>
+        <Container id="Tentang saya">
             <AuntLayout>
 
                 <AboutMe>

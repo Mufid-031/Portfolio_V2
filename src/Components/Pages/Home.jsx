@@ -5,7 +5,7 @@ import HeroMain from "../Fragments/HeroMain/HeroMain"
 
 const Home = () => {
     return (
-        <Container>
+        <Container id="Beranda">
             <AuntLayout>
                 <Main>
                     <Main.Hello />
