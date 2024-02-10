@@ -38,7 +38,7 @@ const ContainerLink = (Props) => {
 
 const LinkInstagram = () => {
     return (
-        <div className="w-10 h-10 p-2 border-2 rounded-full">
+        <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="#">
                 <Instagram />
             </a>
@@ -48,7 +48,7 @@ const LinkInstagram = () => {
 
 const LinkTwitter = () => {
     return (
-        <div className="w-10 h-10 p-2 border-2 rounded-full">
+        <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="#">
                 <Twitter />
             </a>
@@ -58,7 +58,7 @@ const LinkTwitter = () => {
 
 const LinkTikTok = () => {
     return (
-        <div className="w-10 h-10 p-2 border-2 rounded-full">
+        <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="#">
                 <TikTok />
             </a>
@@ -68,7 +68,7 @@ const LinkTikTok = () => {
 
 const LinkDiscord = () => {
     return (
-        <div className="w-10 h-10 p-2 border-2 rounded-full">
+        <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="#">
                 <Discord />
             </a>
@@ -78,7 +78,7 @@ const LinkDiscord = () => {
 
 const LinkGithub = () => {
     return (
-        <div className="w-10 h-10 p-2 border-2 rounded-full">
+        <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="#">
                 <Github />
             </a>

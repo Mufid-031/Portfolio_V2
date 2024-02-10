@@ -21,11 +21,11 @@ const Portfolio = () => {
             <h1 className="text-3xl font-bold text-mainColor">My Portfolio</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, delectus esse? Perspiciatis libero ipsam praesentium illo ea ad doloremque placeat vel eveniet quam eum nulla officiis consequuntur, porro labore quos?</p>
             <AuntLayout>
-                <div className="w-full h-screen bg-white shadow-lg rounded-xl mt-5">
+                <div className="flex flex-wrap gap-2 w-full h-screen bg-white shadow-lg rounded-xl mt-5">
                     {
                         gambar.map((item, index) => {
                             return (
-                                <div key={index}>
+                                <div key={index} className="w-full lg:w-1/3">
                                     <div className="w-full rounded-xl overflow-hidden">
                                         <img src={item.img} alt="panda-store" />
                                     </div>
