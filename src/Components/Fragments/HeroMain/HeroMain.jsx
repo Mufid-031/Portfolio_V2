@@ -21,7 +21,7 @@ const HeroContainer = () => {
 
 const BlobContainer = () => {
     return (
-        <span className="absolute -bottom-40 -left-10 block w-[700px] -z-10 lg:w-[700px] lg:-bottom-48">
+        <span className="absolute -bottom-40 -left-20 block w-[700px] -z-10 lg:w-[700px] lg:-bottom-48">
             <Blob />
         </span>
     )
