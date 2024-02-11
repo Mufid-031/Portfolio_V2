@@ -1,7 +1,10 @@
+import { useEffect } from "react"
 import Button from "../../Elements/Button/Button"
 
 const Main = (Props) => {
     const { children } = Props
+
+
 
     return (
         <div className="w-full lg:w-1/2 lg:self-center">
@@ -16,15 +19,38 @@ const Hello = () => {
     )
 }
 
-const NameHero = () => {
+const NameHero = (Props) => {
+    const { isDarkMode } = Props
+
+    useEffect(() => {
+        if (isDarkMode === '') {
+            document.querySelector('#name').classList.add('text-slate-800')
+        } else if (isDarkMode === 'dark') {
+            document.querySelector('#name').classList.remove('text-slate-800')
+        } else if (isDarkMode === 'light') {
+            document.querySelector('#name').classList.add('text-slate-800')
+        }
+    }, [isDarkMode])
+
     return (
-        <h1 className="text-5xl font-bold block text-slate-800 lg:text-6xl">Ahmad Mufid Risqi</h1>
+        <h1 id="name" className="text-5xl font-bold block lg:text-6xl">Ahmad Mufid Risqi</h1>
     )
 }
 
-const HeroJob = () => {
+const HeroJob = (Props) => {
+    const { isDarkMode } = Props
+
+    useEffect(() => {
+        if (isDarkMode === '') {
+            document.querySelector('#job').classList.add('text-slate-800')
+        } else if (isDarkMode === 'dark') {
+            document.querySelector('#job').classList.remove('text-slate-800')
+        } else if (isDarkMode === 'light') {
+            document.querySelector('#job').classList.add('text-slate-800')
+        }
+    }, [isDarkMode])
     return (
-        <h2 className="text-xl font-semibold text-slate-800 mt-3 lg:text-2xl">Frontend Developer | Backend Developer</h2>
+        <h2 id="job" className="text-xl font-semibold mt-3 lg:text-2xl">Frontend Developer | Backend Developer</h2>
     )
 }
 

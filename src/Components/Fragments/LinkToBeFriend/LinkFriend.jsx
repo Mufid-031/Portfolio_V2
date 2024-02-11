@@ -1,8 +1,9 @@
-import Instagram from "../../Elements/Icon/Instagram"
-import Twitter from "../../Elements/Icon/Twitter"
-import TikTok from "../../Elements/Icon/TikTok"
-import Discord from "../../Elements/Icon/Discord"
-import Github from "../../Elements/Icon/Github"
+
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const LinkFriend = (Props) => {
     const { children } = Props
@@ -37,50 +38,55 @@ const ContainerLink = (Props) => {
 }
 
 const LinkInstagram = () => {
+
     return (
         <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
-            <a href="#">
-                <Instagram />
+            <a href="https://www.instagram.com/damslette3/">
+                <FaInstagram size={20} />
             </a>
         </div>
     )
 }
 
 const LinkTwitter = () => {
+
     return (
         <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
-            <a href="#">
-                <Twitter />
+            <a href="https://twitter.com/MufidRisqi30683">
+                <FaTwitter size={20} />
             </a>
         </div>
     )
 }
 
 const LinkTikTok = () => {
+
     return (
         <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
-            <a href="#">
-                <TikTok />
+            <a href="https://www.tiktok.com/@mufid_risqi?lang=id-ID">
+                <FaTiktok size={20} />
             </a>
         </div>
     )
 }
 
 const LinkDiscord = () => {
+
     return (
         <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
-            <a href="#">
-                <Discord />
+            <a href="https://discord.com/channels/@scrips-031">
+                <FaDiscord size={20} />
             </a>
         </div>
     )
 }
 
 const LinkGithub = () => {
+
     return (
         <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
-            <a href="#">
-                <Github />
+            <a href="https://github.com/Mufid-031">
+                <FaGithub size={20} />
             </a>
         </div>
     )

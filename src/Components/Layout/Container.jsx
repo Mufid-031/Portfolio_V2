@@ -1,8 +1,11 @@
+
 const Container = (Props) => {
-    const { children } = Props
+    const { children, id } = Props
+
+
 
     return (
-        <div className="container mx-auto mt-20 mb-36">
+        <div className="container mx-auto mt-20 mb-36" id={id}>
             {children}
         </div>
     )

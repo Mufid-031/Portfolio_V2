@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import Navbar from "../Fragments/Navbar/Navbar"
 
-const LayoutNavbar = () => {
+const LayoutNavbar = (Props) => {
+    const { isDarkMode, setIsDarkMode } = Props
     const [active, setActive] = useState('no-active')
     const [scroll, setScroll] = useState(false)
 
@@ -11,6 +12,7 @@ const LayoutNavbar = () => {
                 setScroll(true)
                 const nav = document.querySelector('#navbar')
                 const navMenu = document.querySelector('.nav-ul')
+                const darkModeToggle = document.querySelector('#dark-mode-toggle')
                 nav.classList.remove('relative')
                 nav.classList.add('fixed')
                 nav.classList.add('bg-transparent')
@@ -19,6 +21,7 @@ const LayoutNavbar = () => {
                 nav.classList.add('z-50')
                 nav.classList.add('border-b-2')
                 navMenu.classList.remove('lg:bg-white')
+                darkModeToggle.classList.add('lg:bg-transparent')
             } else {
                 setScroll(false)
                 const nav = document.querySelector('#navbar')
@@ -35,14 +38,23 @@ const LayoutNavbar = () => {
         scrollActive()
     }, [scroll])
 
-
+    useEffect(() => {
+        if (isDarkMode === '') {
+            document.querySelector('#navbar').classList.remove('bg-slate-800')
+        } else if (isDarkMode === 'dark') {
+            document.querySelector('#navbar').classList.add('bg-slate-800')
+        } else if (isDarkMode === 'light') {
+            document.querySelector('#navbar').classList.remove('bg-slate-800')
+        }
+    }, [isDarkMode])
 
     return (
         <nav className="w-full h-16 p-1 flex justify-between items-center relative lg:justify-around" id="navbar">
             <Navbar active={active}>
                 <Navbar.NavbarTitle />
                 <Navbar.NavbarHamburger active={active} setActive={setActive} />
-                <Navbar.NavbarMenu />
+                <Navbar.NavbarMenu isDarkMode={isDarkMode} />
+                <Navbar.DarkModeToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
             </Navbar>
         </nav>
     )

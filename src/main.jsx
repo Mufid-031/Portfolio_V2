@@ -16,9 +16,9 @@ import ErrorPage from './Components/Pages/404.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: 
+    element:
       <GetStarted />,
-      errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/app",

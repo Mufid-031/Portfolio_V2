@@ -3,7 +3,9 @@ import AuntLayout from "../Layout/AuntLayout"
 import AboutMe from "../Fragments/AboutMe/AboutMe"
 import LinkFriend from "../Fragments/LinkToBeFriend/LinkFriend"
 
-const About = () => {
+const About = (Props) => {
+    const { isDarkMode } = Props
+
     return (
         <Container id="Tentang saya">
             <AuntLayout>
@@ -13,7 +15,7 @@ const About = () => {
                     <AboutMe.Description />
                 </AboutMe>
 
-                <LinkFriend>
+                <LinkFriend isDarkMode={isDarkMode}>
                     <LinkFriend.Title />
                     <LinkFriend.Description />
                     <LinkFriend.Container>
