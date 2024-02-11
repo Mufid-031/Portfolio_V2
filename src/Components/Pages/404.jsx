@@ -4,8 +4,8 @@ const ErrorPage = () => {
     return (
         <ErrorContainer>
             <ErrorContainer.ErrorElement>
-                <ErrorContainer.ErrorElement.ErrorTitle />
-                <ErrorContainer.ErrorElement.ErrorButton />
+                <ErrorContainer.ErrorTitle />
+                <ErrorContainer.ErrorButton />
             </ErrorContainer.ErrorElement>
         </ErrorContainer>
     )

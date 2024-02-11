@@ -7,10 +7,10 @@ const GetStarted = () => {
         <Container>
             <Layout>
                 <Layout.Main>
-                    <Layout.Main.ReadMore />
-                    <Layout.Main.Title>
-                        <Layout.Main.Title.Button />
-                    </Layout.Main.Title>
+                    <Layout.ReadMore />
+                    <Layout.Title>
+                        <Layout.Button />
+                    </Layout.Title>
                 </Layout.Main>
             </Layout>
         </Container>

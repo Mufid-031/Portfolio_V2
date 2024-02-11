@@ -72,8 +72,8 @@ const Button = () => {
 
 
 Layout.Main = Main
-Main.ReadMore = ReadMore
-Main.Title = Title
-Title.Button = Button
+Layout.ReadMore = ReadMore
+Layout.Title = Title
+Layout.Button = Button
 
 export default Layout

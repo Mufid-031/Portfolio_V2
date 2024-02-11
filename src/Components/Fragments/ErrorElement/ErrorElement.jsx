@@ -48,8 +48,8 @@ const ErrorButton = () => {
 }
 
 ErrorContainer.ErrorElement = ErrorElement
-ErrorElement.ErrorTitle = ErrorTitle
-ErrorElement.ErrorButton = ErrorButton
+ErrorContainer.ErrorTitle = ErrorTitle
+ErrorContainer.ErrorButton = ErrorButton
 
 
 export default ErrorContainer
