@@ -1,9 +1,10 @@
 import { useEffect } from "react"
-import Button from "../../Elements/Button/Button"
-import Span from "../../Elements/HamburgerSpan/Span"
+import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { IoMoon } from "react-icons/io5"
-import { FiSun } from "react-icons/fi";
+import { FiSun } from "react-icons/fi"
+import { variantSlideRight } from "../../../Framer-Motion/SlideAnimation"
+import { variantScaleUp } from "../../../Framer-Motion/ScaleAnimation"
 
 const Navbar = (Props) => {
     const { active, children } = Props
@@ -26,8 +27,9 @@ const Navbar = (Props) => {
 }
 
 const NavbarTitle = () => {
+
     return (
-        <h1 className="text-2xl font-semibold text-mainColor">Ahmad Mufid Risqi</h1>
+        <motion.h1 initial="hidden" animate="visible" variants={variantScaleUp} className="text-2xl font-semibold text-mainColor">Ahmad Mufid Risqi</motion.h1>
     )
 }
 
@@ -43,19 +45,19 @@ const NavbarHamburger = (Props) => {
         }
     }
 
+
     return (
-        <Button className="block w-8 h-10 lg:hidden hamburger" onClick={() => hamburgerActive()}>
-            <Span className="block w-8 h-1 bg-mainColor transition-transform duration-500 origin-left" />
-            <Span className="block w-8 h-1 bg-mainColor mt-[7px] transition-transform duration-500" />
-            <Span className="block w-8 h-1 bg-mainColor mt-[7px] transition-transform duration-500 origin-left" />
-        </Button>
+        <motion.button initial="hidden" animate="visible" variants={variantScaleUp} className="block w-8 h-10 lg:hidden hamburger" onClick={() => hamburgerActive()}>
+            <motion.span className="block w-8 h-1 bg-mainColor transition-transform duration-500 origin-left" />
+            <motion.span className="block w-8 h-1 bg-mainColor mt-[7px] transition-transform duration-500" />
+            <motion.span className="block w-8 h-1 bg-mainColor mt-[7px] transition-transform duration-500 origin-left" />
+        </motion.button>
     )
 }
 
 const NavbarMenu = (Props) => {
     const { isDarkMode } = Props
     const NavbarMenu = ['Beranda', 'Tentang Saya', 'Portfolio', 'Kontak']
-    console.log(isDarkMode)
 
     useEffect(() => {
         if (isDarkMode === '') {
@@ -73,12 +75,15 @@ const NavbarMenu = (Props) => {
         }
     }, [isDarkMode])
 
+
     return (
-        <ul className="border-2 shadow-xl absolute right-0 -bottom-44 lg:flex lg:w-1/2 lg:static lg:shadow-none lg:border-none justify-evenly hidden nav-ul">
+        <motion.ul initial="hidden" animate="visible" variants={variantSlideRight} className="border-2 shadow-xl absolute right-0 -bottom-44 lg:flex lg:w-1/2 lg:static lg:shadow-none lg:border-none justify-evenly hidden nav-ul">
             {NavbarMenu.map((item, index) => {
-                return <li key={index} className="text-lg hover:text-mainColor py-2 px-5"><Link to={`#${item}`}>{item}</Link></li>
+                return (
+                    <motion.li variants={variantSlideRight} key={index} className="text-lg hover:text-mainColor py-2 px-5"><Link to={`#${item}`}>{item}</Link></motion.li>
+                )
             })}
-        </ul>
+        </motion.ul>
     )
 }
 
@@ -96,9 +101,9 @@ const DarkModeToggle = (Props) => {
     }, [isDarkMode])
 
     return (
-        <div id="dark-mode-toggle" className="absolute right-0 -bottom-44 lg:flex lg:w-[100px] lg:static lg:shadow-none lg:bg-white lg:border-none justify-evenly items-center hidden cursor-pointer">
+        <motion.div id="dark-mode-toggle" initial="hidden" animate="visible" variants={variantScaleUp} className="absolute right-0 -bottom-44 lg:flex lg:w-[100px] lg:static lg:shadow-none lg:bg-white lg:border-none justify-evenly items-center hidden cursor-pointer">
             <IsDarkMode isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-        </div>
+        </motion.div>
     )
 }
 

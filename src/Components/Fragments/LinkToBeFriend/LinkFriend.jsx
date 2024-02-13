@@ -17,13 +17,13 @@ const LinkFriend = (Props) => {
 
 const Linktitle = () => {
     return (
-        <h2 className="text-3xl font-bold block text-mainColor mt-10 lg:text-4xl">Mari Berkawan</h2>
+        <h2 data-aos="fade-right" className="text-3xl font-bold block text-mainColor mt-10 lg:text-4xl">Mari Berkawan</h2>
     )
 }
 
 const LinkDescription = () => {
     return (
-        <p className="text-dark mt-2 w-3/4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo dolorum cupiditate delectus labore magni asperiores adipisci minima maiores? A, dolore.</p>
+        <p data-aos="fade-right" data-aos-delay="400" className="text-dark mt-2 w-3/4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo dolorum cupiditate delectus labore magni asperiores adipisci minima maiores? A, dolore.</p>
     )
 }
 
@@ -40,7 +40,7 @@ const ContainerLink = (Props) => {
 const LinkInstagram = () => {
 
     return (
-        <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
+        <div data-aos="fade-right" data-aos-delay="800" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="https://www.instagram.com/damslette3/">
                 <FaInstagram size={20} />
             </a>
@@ -51,7 +51,7 @@ const LinkInstagram = () => {
 const LinkTwitter = () => {
 
     return (
-        <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
+        <div data-aos="fade-right" data-aos-delay="1000" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="https://twitter.com/MufidRisqi30683">
                 <FaTwitter size={20} />
             </a>
@@ -62,7 +62,7 @@ const LinkTwitter = () => {
 const LinkTikTok = () => {
 
     return (
-        <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
+        <div data-aos="fade-right" data-aos-delay="1200" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="https://www.tiktok.com/@mufid_risqi?lang=id-ID">
                 <FaTiktok size={20} />
             </a>
@@ -73,7 +73,7 @@ const LinkTikTok = () => {
 const LinkDiscord = () => {
 
     return (
-        <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
+        <div data-aos="fade-right" data-aos-delay="1400" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="https://discord.com/channels/@scrips-031">
                 <FaDiscord size={20} />
             </a>
@@ -84,7 +84,7 @@ const LinkDiscord = () => {
 const LinkGithub = () => {
 
     return (
-        <div className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
+        <div data-aos="fade-right" data-aos-delay="1600" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="https://github.com/Mufid-031">
                 <FaGithub size={20} />
             </a>

@@ -3,7 +3,7 @@ const Layout = (Props) => {
     const { children } = Props
 
     return (
-        <div className="flex flex-wrap w-full lg:bg-slate-300 rounded-xl z-0">
+        <div data-aos="fade-up" data-aos-duration="1000" className="flex flex-wrap w-full lg:bg-slate-300 rounded-xl z-0">
             {children}
         </div >
     )
@@ -12,7 +12,7 @@ const Layout = (Props) => {
 const Title = () => {
     return (
         <div className="flex lg:flex-col lg:items-center lg:justify-center lg:-rotate-90 lg:-z-10 w-full lg:w-1/4 pr-2">
-            <h1 className="text-3xl lg:text-[100px] lg:drop-shadow-xl font-bold text-mainColor w-[600px] lg:z-10">My Portfolio</h1>
+            <h1 data-aos="fade-up" data-aos-duration="1000" className="text-3xl lg:text-[100px] lg:drop-shadow-xl font-bold text-mainColor w-[600px] lg:z-10">My Portfolio</h1>
         </div>
     )
 }
@@ -21,7 +21,7 @@ const CardContainer = (Props) => {
     const { children } = Props
 
     return (
-        <div className="flex flex-wrap w-full lg:w-3/4 bg-white shadow-xl rounded-xl lg:z-10">
+        <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200" className="flex flex-wrap w-full lg:w-3/4 bg-white shadow-xl rounded-xl lg:z-10">
             {children}
         </div>
     )
@@ -34,21 +34,28 @@ const Card = () => {
             img: "../src/assets/img/1.png",
             title: "Panda Store",
             colorTitle: "lime-300",
+            data_aos: "fade-right"
         },
         {
             img: "../src/assets/img/2.png",
             title: "Belajar React",
             colorTitle: "cyan-300",
+            data_aos: "fade-right",
+            data_aos_delay: "400"
         },
         {
             img: "../src/assets/img/3.png",
             title: "Scrips Movie",
             colorTitle: "amber-300",
+            data_aos: "fade-right",
+            data_aos_delay: "800"
         },
         {
             img: "../src/assets/img/4.png",
             title: "Laptop Store/ Register Page",
             colorTitle: "lime-300",
+            data_aos: "fade-right",
+            data_aos_delay: "1200"
         }
 
     ]
