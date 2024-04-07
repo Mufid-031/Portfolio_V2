@@ -1,10 +1,13 @@
 import { useEffect } from "react"
 import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
 import { IoMoon } from "react-icons/io5"
 import { FiSun } from "react-icons/fi"
 import { variantSlideRight } from "../../../Framer-Motion/SlideAnimation"
 import { variantScaleUp } from "../../../Framer-Motion/ScaleAnimation"
+import { useContext } from "react"
+import { AppContext } from "../../../App"
+import { useState } from "react"
+
 
 const Navbar = (Props) => {
     const { active, children } = Props
@@ -58,29 +61,69 @@ const NavbarHamburger = (Props) => {
 const NavbarMenu = (Props) => {
     const { isDarkMode } = Props
     const NavbarMenu = ['Beranda', 'Tentang Saya', 'Portfolio', 'Kontak']
+    const { link, setLink } = useContext(AppContext)
+    const [scrollTo, setScrollTo] = useState('')
 
     useEffect(() => {
         if (isDarkMode === '') {
             document.querySelector('.nav-ul').classList.remove('lg:bg-slate-800')
+            document.querySelector('.nav-ul').classList.remove('bg-slate-800')
             document.querySelector('.nav-ul').classList.remove('text-slate-50')
             document.querySelector('.nav-ul').classList.add('text-slate-800')
         } else if (isDarkMode === 'dark') {
             document.querySelector('.nav-ul').classList.add('lg:bg-slate-800')
+            document.querySelector('.nav-ul').classList.add('bg-slate-800')
             document.querySelector('.nav-ul').classList.add('text-slate-50')
             document.querySelector('.nav-ul').classList.remove('text-slate-800')
         } else if (isDarkMode === 'light') {
             document.querySelector('.nav-ul').classList.remove('lg:bg-slate-800')
+            document.querySelector('.nav-ul').classList.remove('bg-slate-800')
             document.querySelector('.nav-ul').classList.remove('text-slate-50')
             document.querySelector('.nav-ul').classList.add('text-slate-800')
         }
     }, [isDarkMode])
 
+    const handleClick = (e) => {
+        setLink(e.target.innerText)
+    }
+
+    useEffect(() => {
+        setScrollTo(`#${link}`)
+    }, [link])
+
+    useEffect(() => {
+        if (scrollTo === '#Beranda') {
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            })
+        } else if (scrollTo === '#Tentang Saya') {
+            window.scroll({
+                top: 500,
+                left: 0,
+                behavior: 'smooth'
+            })
+        } else if (scrollTo === '#Portfolio') {
+            window.scroll({
+                top: 1090,
+                left: 0,
+                behavior: 'smooth'
+            })
+        } else if (scrollTo === '#Kontak') {
+            window.scroll({
+                top: 2000,
+                left: 0,
+                behavior: 'smooth'
+            })
+        }
+    }, [scrollTo])
 
     return (
         <motion.ul initial="hidden" animate="visible" variants={variantSlideRight} className="border-2 shadow-xl absolute right-0 -bottom-44 lg:flex lg:w-1/2 lg:static lg:shadow-none lg:border-none justify-evenly hidden nav-ul">
             {NavbarMenu.map((item, index) => {
                 return (
-                    <motion.li variants={variantSlideRight} key={index} className="text-lg hover:text-mainColor py-2 px-5"><Link to={`#${item}`}>{item}</Link></motion.li>
+                    <motion.li variants={variantSlideRight} key={index} className="text-lg hover:text-mainColor py-2 px-5 cursor-pointer"><a onClick={(e) => handleClick(e)}>{item}</a></motion.li>
                 )
             })}
         </motion.ul>
@@ -93,15 +136,18 @@ const DarkModeToggle = (Props) => {
     useEffect(() => {
         if (isDarkMode === '') {
             document.querySelector('#dark-mode-toggle').classList.add('lg:bg-white')
+            document.querySelector('#dark-mode-toggle').classList.add('bg-white')
         } else if (isDarkMode === 'dark') {
             document.querySelector('#dark-mode-toggle').classList.remove('lg:bg-white')
+            document.querySelector('#dark-mode-toggle').classList.remove('bg-white')
         } else if (isDarkMode === 'light') {
             document.querySelector('#dark-mode-toggle').classList.add('lg:bg-white')
+            document.querySelector('#dark-mode-toggle').classList.add('bg-white')
         }
     }, [isDarkMode])
 
     return (
-        <motion.div id="dark-mode-toggle" initial="hidden" animate="visible" variants={variantScaleUp} className="absolute right-0 -bottom-44 lg:flex lg:w-[100px] lg:static lg:shadow-none lg:bg-white lg:border-none justify-evenly items-center hidden cursor-pointer">
+        <motion.div id="dark-mode-toggle" initial="hidden" animate="visible" variants={variantScaleUp} className="absolute right-14 lg:right-0 bottom-4 lg:-bottom-44 flex lg:w-[100px] lg:static lg:shadow-none lg:bg-white lg:border-none justify-evenly items-center cursor-pointer">
             <IsDarkMode isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         </motion.div>
     )

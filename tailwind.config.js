@@ -2,6 +2,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      poppins: ["Poppins", "sans-serif"],
+    },
     container: {
       center: true,
       padding: {
@@ -17,6 +20,8 @@ export default {
         mainColor: "#22d3ee",
         dark: "#64748b",
         light: "#f1faee",
+        darkGray: "#50586D",
+        lightGray: "#f1faee",
       },
     },
   },

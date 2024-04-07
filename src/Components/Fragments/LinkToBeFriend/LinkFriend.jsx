@@ -40,7 +40,7 @@ const ContainerLink = (Props) => {
 const LinkInstagram = () => {
 
     return (
-        <div data-aos="fade-right" data-aos-delay="800" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
+        <div data-aos="fade-right" data-aos-delay="400" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="https://www.instagram.com/damslette3/">
                 <FaInstagram size={20} />
             </a>
@@ -51,7 +51,7 @@ const LinkInstagram = () => {
 const LinkTwitter = () => {
 
     return (
-        <div data-aos="fade-right" data-aos-delay="1000" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
+        <div data-aos="fade-right" data-aos-delay="600" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="https://twitter.com/MufidRisqi30683">
                 <FaTwitter size={20} />
             </a>
@@ -62,7 +62,7 @@ const LinkTwitter = () => {
 const LinkTikTok = () => {
 
     return (
-        <div data-aos="fade-right" data-aos-delay="1200" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
+        <div data-aos="fade-right" data-aos-delay="800" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="https://www.tiktok.com/@mufid_risqi?lang=id-ID">
                 <FaTiktok size={20} />
             </a>
@@ -73,7 +73,7 @@ const LinkTikTok = () => {
 const LinkDiscord = () => {
 
     return (
-        <div data-aos="fade-right" data-aos-delay="1400" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
+        <div data-aos="fade-right" data-aos-delay="1000" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="https://discord.com/channels/@scrips-031">
                 <FaDiscord size={20} />
             </a>
@@ -84,7 +84,7 @@ const LinkDiscord = () => {
 const LinkGithub = () => {
 
     return (
-        <div data-aos="fade-right" data-aos-delay="1600" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
+        <div data-aos="fade-right" data-aos-delay="1200" className="w-10 h-10 p-2 border-2 rounded-full hover:bg-mainColor hover:text-white">
             <a href="https://github.com/Mufid-031">
                 <FaGithub size={20} />
             </a>

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply font-poppins;
+  }
+}
+
 @layer components {
   .hamburger.active > span:nth-child(1) {
     @apply rotate-45;
