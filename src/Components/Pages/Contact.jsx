@@ -1,20 +1,20 @@
-import Container from "../Layout/Container"
-import AuntLayout from "../Layout/AuntLayout"
-import Label from "../Elements/Input/Label"
-import Form from "../Elements/Input/Form"
-import Lottie from 'react-lottie';
-import animationData from '../../../src/Lottie-animation/Animation - 1703686482547.json'
-import Map from "../Elements/Map/Map";
+// import Container from "../Layout/Container"
+// import AuntLayout from "../Layout/AuntLayout"
+// import Label from "../Elements/Input/Label"
+// import Form from "../Elements/Input/Form"
+// import Lottie from 'react-lottie';
+// import animationData from '../../../src/Lottie-animation/Animation - 1703686482547.json'
+// import Map from "../Elements/Map/Map";
 const Contact = () => {
 
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-        rendererSettings: {
-            preserveAspectRatio: "xMidYMid slice"
-        }
-    }
+    // const defaultOptions = {
+    //     loop: true,
+    //     autoplay: true,
+    //     animationData: animationData,
+    //     rendererSettings: {
+    //         preserveAspectRatio: "xMidYMid slice"
+    //     }
+    // }
 
     return (
         <section className = "bg-white dark:bg-gray-900" >
