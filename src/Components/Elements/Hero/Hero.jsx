@@ -1,6 +1,9 @@
+import avatar from "../../../../public/img/hero1.png"
+
+
 const Hero = () => {
     return (
-        <img src="../src/assets/img/hero1.png" alt="hero" />
+        <img src={avatar} alt="hero" />
     )
 }
 

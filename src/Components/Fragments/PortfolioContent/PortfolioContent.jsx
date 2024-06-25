@@ -1,3 +1,9 @@
+import img1 from "../../../../public/img/1.png";
+import img2 from "../../../../public/img/2.png";
+import img3 from "../../../../public/img/3.png";
+import img4 from "../../../../public/img/4.png";
+
+
 
 const Layout = (Props) => {
     const { children } = Props
@@ -31,27 +37,27 @@ const Card = () => {
 
     const gambar = [
         {
-            img: "../src/assets/img/1.png",
+            img: img1,
             title: "Panda Store",
             colorTitle: "lime-300",
             data_aos: "fade-right"
         },
         {
-            img: "../src/assets/img/2.png",
+            img: img2,
             title: "Belajar React",
             colorTitle: "cyan-300",
             data_aos: "fade-right",
             data_aos_delay: "400"
         },
         {
-            img: "../src/assets/img/3.png",
+            img: img3,
             title: "Scrips Movie",
             colorTitle: "amber-300",
             data_aos: "fade-right",
             data_aos_delay: "800"
         },
         {
-            img: "../src/assets/img/4.png",
+            img: img4,
             title: "Laptop Store/ Register Page",
             colorTitle: "lime-300",
             data_aos: "fade-right",
